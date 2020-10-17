@@ -1,20 +1,4 @@
-const quiz = [
-  {
-    question: "your first name is ?",
-    answers: ["mnb", "dsfamnb", "mfsanb", "mnbdsa"],
-    correct: "mnb",
-  },
-  {
-    question: "your last name is ?",
-    answers: ["mnb", "fukui", "mfsanb", "mnbdsa"],
-    correct: "fukui",
-  },
-  {
-    question: "your borother is ?",
-    answers: ["mnb", "dsfamnb", "hjm", "mnbdsa"],
-    correct: "hjm",
-  },
-];
+import { quiz } from "./quiz.js";
 
 const quizLength = quiz.length;
 let quizIndex = 0;
