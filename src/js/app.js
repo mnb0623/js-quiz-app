@@ -1,17 +1,18 @@
 import { quiz } from "./quiz.js";
 
+const $question = document.getElementById("js-question");
 const quizLength = quiz.length;
 let quizIndex = 0;
 let score = 0;
-const $button = document.getElementsByTagName("button");
-const buttonLength = $button.length;
+const $buttons = document.getElementsByTagName("button");
+const buttonLength = $buttons.length;
 
 // 問題文、選択肢を定義
 const setupQuiz = function () {
-  document.getElementById("js-question").textContent = quiz[quizIndex].question;
+  $question.textContent = quiz[quizIndex].question;
   let buttonIndex = 0;
   while (buttonIndex < buttonLength) {
-    $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
+    $buttons[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
     buttonIndex++;
   }
 };
@@ -36,7 +37,7 @@ const clickHandler = (e) => {
 
 let handleIndex = 0;
 while (handleIndex < buttonLength) {
-  $button[handleIndex].addEventListener("click", (e) => {
+  $buttons[handleIndex].addEventListener("click", (e) => {
     clickHandler(e);
   });
   handleIndex++;
