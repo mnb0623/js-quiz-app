@@ -34,7 +34,9 @@ const showEnd = () => {
     // 問題数がまだあれば実行
     setupQuiz()
   } else {
-    window.alert("end. your score is" + score + "/" + quizLength);
+    $question.textContent = "end. your score is" + score + "/" + quizLength;
+    const $items = document.getElementById("js-items");
+    $items.style.visibility = "hidden";
   }
 };
 
