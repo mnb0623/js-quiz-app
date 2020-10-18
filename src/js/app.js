@@ -26,7 +26,10 @@ const clickHandler = (e) => {
     window.alert("NG");
   }
   quizIndex++;
+  showEnd();
+};
 
+const showEnd = () => {
   if (quizIndex < quizLength) {
     // 問題数がまだあれば実行
     setupQuiz()
