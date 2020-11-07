@@ -4,7 +4,7 @@ const $question = document.getElementById("js-question");
 const quizLength = quiz.length;
 let quizIndex = 0;
 let score = 0;
-const $buttons = document.getElementsByTagName('button');
+const $buttons = document.getElementsByTagName("button");
 const buttonLength = $buttons.length;
 
 // 問題文、選択肢を定義
